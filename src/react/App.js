@@ -8,6 +8,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log('test envvar is: "' + process.env.REACT_APP_TEST + '"');
     let backend_addr = process.env.REACT_APP_BACKEND_ADDR;
     console.log('fetching data from ' + backend_addr + '...');
     fetch(backend_addr + '/magic')
