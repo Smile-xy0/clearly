@@ -8,11 +8,13 @@
     "react-scripts": "2.0.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start-front": "react-scripts start",
+    "start-back": "pipenv run flask run",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:8787/",
   "eslintConfig": {
     "extends": "react-app"
   },

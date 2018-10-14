@@ -3,6 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = {
+    magic_word: 'please',
+  }
+
+  componentDidMount() {
+    fetch('/magic')
+      .then((data) => data.json())
+      .then((data) => {
+        this.setState({ magic_word: data.magic_word });
+      });
+  }
+
   render() {
     return (
       <div className="App">
@@ -19,6 +31,9 @@ class App extends Component {
           >
             Learn React
           </a>
+          <p>
+            The magic word is: {this.state.magic_word}
+          </p>
         </header>
       </div>
     );
