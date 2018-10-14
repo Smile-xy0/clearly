@@ -5,6 +5,7 @@ from app import create_app
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 
 
-@app.route('/magic')
-def magic_word():
-    return jsonify(magic_word='Alakazam!')
+@app.route('/')
+def coming_soon():
+    return jsonify(
+        message="The clearly API does not exist yet. Please check back soon.")
