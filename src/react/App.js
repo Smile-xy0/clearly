@@ -8,9 +8,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/magic')
+    let backend_addr = process.env.REACT_APP_BACKEND_ADDR;
+    console.log('fetching data from ' + backend_addr + '...');
+    fetch(backend_addr + '/magic')
       .then((data) => data.json())
       .then((data) => {
+        console.log('got data!');
         this.setState({ magic_word: data.magic_word });
       });
   }
