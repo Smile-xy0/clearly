@@ -1,0 +1,14 @@
+.SideBar {
+    height: 100%;
+    width: 100%;
+    background-color: #BBBBBB;
+    border-right: #333333 1px solid;
+}
+
+.nav-brand {
+    padding: 15px;
+}
+
+.nav-links {
+    margin-top: 20%;
+}

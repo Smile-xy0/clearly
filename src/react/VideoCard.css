@@ -1,0 +1,13 @@
+.VideoCard {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.CardBody {
+    background-color: #EEEEEE;
+}
+
+.videocard-tags {
+    padding-top: 15px;
+}
