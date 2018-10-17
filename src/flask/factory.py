@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_cors import CORS
 from config import config
+import routes
+import models
 
 
 def create_app(config_name):
@@ -11,5 +13,6 @@ def create_app(config_name):
     CORS(app)
 
     # register blueprints here
+    routes.register(app)
 
     return app
